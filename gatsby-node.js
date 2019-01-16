@@ -32,7 +32,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Create blog posts pages.
         result.data.allMdx.edges.forEach(({ node }) => {
           createPage({
-            path: `/${node.parent.name}-generated-url/`,
+            path: `/${node.parent.name}/`,
             component: path.resolve('./src/components/layout-mdx-runtime.js'),
             context: { id: node.id },
           })
